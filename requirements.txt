@@ -1,2 +1,6 @@
-Flask
+Django
+djangorestframework
+djangorestframework-simplejwt
+djoser
+django-cors-headers
 gunicorn
