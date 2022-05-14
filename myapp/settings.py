@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-_^la&pom=m3ye&xm%fu^zo-_2^7cc5&7g&(!_ikg3eci$zk_sm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '*'
+]
 
 
 # Application definition
@@ -56,9 +58,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    "http://localhost:3000"
-]
+# CORS_ORIGIN_WHITELIST = [
+#     "http://localhost:3000"
+# ]
 
 ROOT_URLCONF = 'myapp.urls'
 
