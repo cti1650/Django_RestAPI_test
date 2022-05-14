@@ -1,6 +1,6 @@
-# Flask_test
+# Django_RestAPI_test
 
-## Flask
+## Django
    
 ### サンプル
 
@@ -10,32 +10,15 @@
 
 [https://flask-test-cti-tl.herokuapp.com/](https://flask-test-cti-tl.herokuapp.com/)
 
-```python
-import os
-from flask import Flask
-
-app = Flask(__name__, static_folder='.', static_url_path='')
-
-@app.route("/")
-def index():
-    return {"text": "Hello World!!"}
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(port=port, debug=True)
-```
-
-### サーバー立ち上げ
-
-```
-gunicorn main:app --log-file=-
-```
 
 ### requirements.txt 作成
 
 ```plane:requirements.txt
-Flask
-gunicorn
+Django
+djangorestframework
+djangorestframework-simplejwt
+djoser
+django-cors-headers
 ```
 
 ### アプリ作成
@@ -55,6 +38,19 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+### サーバー立ち上げ
+
+```
+python manage.py runserver 0:8080 --settings=myapp.settings
+```
+
+### テスト用URL
+
+- 管理画面
+```
+/admin/
+```
+
 ## 参考にしたサイト
 
 - [M1 Mac でできるだけ楽に Python 環境を構築する - Qiita](https://qiita.com/C2_now/items/c85be2ffeacd61cc7207)
@@ -70,6 +66,14 @@ python manage.py migrate
 - [Dockerではなくてheroku.ymlを使ってPython2とOpenCVの環境をHeroku上に整える - 猫でもわかるWebプログラミングと副業](https://www.utakata.work/entry/20180109/1515469885)  
 - [Heroku に Flask で作った Web アプリをデプロイする | Simple is Best](https://oldbigbuddha.dev/posts/deploy-flask-app-to-heroku)  
 - [【Python】Flaskとは？FlaskでWeb開発の基礎を学ぼう！ | AI Academy Media](https://aiacademy.jp/media/?p=57)  
+- [Django Rest API + JWT - Qiita](https://qiita.com/sand/items/dc41716a2deef038c145)  
+- [axios & Django REST framework でJSONをGET/POST - Qiita](https://qiita.com/HIJIKI/items/ed4badee7ef37e30b957)  
+- [Djangoでjsonを扱うRESTfulなAPIを作る - Qiita](https://qiita.com/HIJIKI/items/c4f17137ef465f7034bb)  
+
+
+
+
+
 
 
 ## 参考にした動画
