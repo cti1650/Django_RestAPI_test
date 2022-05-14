@@ -38,6 +38,23 @@ Flask
 gunicorn
 ```
 
+### アプリ作成
+
+```
+django-admin startproject myapp .
+django-admin startapp api
+```
+
+### マイグレーション
+```
+python manage.py makemigrations
+```
+
+### マイグレート
+```
+python manage.py migrate
+```
+
 ## 参考にしたサイト
 
 - [M1 Mac でできるだけ楽に Python 環境を構築する - Qiita](https://qiita.com/C2_now/items/c85be2ffeacd61cc7207)
@@ -53,3 +70,9 @@ gunicorn
 - [Dockerではなくてheroku.ymlを使ってPython2とOpenCVの環境をHeroku上に整える - 猫でもわかるWebプログラミングと副業](https://www.utakata.work/entry/20180109/1515469885)  
 - [Heroku に Flask で作った Web アプリをデプロイする | Simple is Best](https://oldbigbuddha.dev/posts/deploy-flask-app-to-heroku)  
 - [【Python】Flaskとは？FlaskでWeb開発の基礎を学ぼう！ | AI Academy Media](https://aiacademy.jp/media/?p=57)  
+
+
+## 参考にした動画
+
+- [[Youtube編] React Hooks + Django RestFramework API でフルスタックWeb | Udemy](https://www.udemy.com/course/youtube-react-hooks-django-restframework-api-web/learn/lecture/20317547#overview)  
+

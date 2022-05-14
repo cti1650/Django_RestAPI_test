@@ -4,4 +4,4 @@ build:
   packages:
     - libopencv-dev
 run:
-  web: gunicorn main:app --log-file=-
+  web: gunicorn manage:app --log-file=-

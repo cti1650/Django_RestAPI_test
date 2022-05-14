@@ -4,7 +4,7 @@
 
 tasks:
   - init: pip install -r requirements.txt
-    command: gunicorn main:app --log-file=-
+    command: gunicorn manage:app --log-file=-
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
